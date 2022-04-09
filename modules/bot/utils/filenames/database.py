@@ -15,3 +15,9 @@ blacklisted_users = os.path.join(
     "data",
     "blacklisted_users.txt"
 )
+
+blacklisted_guilds = os.path.join(
+    _database,
+    "data",
+    "blacklisted_guilds.txt"
+)
