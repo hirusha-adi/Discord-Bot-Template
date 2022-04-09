@@ -3,9 +3,9 @@ import os
 import discord
 from discord.ext import commands
 
-from bot.database import db
+from bot.database.manager import main as db_main
 
-client = commands.Bot(command_prefix=db.Main.prefix)
+client = commands.Bot(command_prefix=db_main.prefix)
 
 for filename in os.listdir('./bot/cogs'):
     if filename.endswith('.py'):  # cogs.musicplayer is not being loded in here
@@ -17,4 +17,4 @@ for filename in os.listdir('./bot/cogs'):
                 f"[+] Unable to load: bot.cogs.{filename[:-3]}  :  {excl}")
 
 
-# client.run(db.Main.token)
+# client.run(db_main.token)
