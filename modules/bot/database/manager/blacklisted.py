@@ -47,9 +47,9 @@ with open(database.blacklisted_channels, "r", encoding="utf-8") as _file_channel
     blacklisted_channels_all_lines = blacklisted_channels_all_lines_first
 
 
-def addGuild(guild_id):
-    if not(guild_id in blacklisted_channels_all_lines):
-        blacklisted_channels_all_lines.append(guild_id)
+def addChannel(channel_id):
+    if not(channel_id in blacklisted_channels_all_lines):
+        blacklisted_channels_all_lines.append(channel_id)
         _updateGuildListFile()
 
 
