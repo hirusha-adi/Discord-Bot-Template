@@ -1,5 +1,6 @@
 from bot.utils.filenames import database
 
+# Users
 with open(database.blacklisted_users, "r", encoding="utf-8") as _file:
     blacklisted_users_all_lines_first = _file.readlines()
     blacklisted_users_all_lines = blacklisted_users_all_lines_first
@@ -8,10 +9,10 @@ with open(database.blacklisted_users, "r", encoding="utf-8") as _file:
 def addUser(user_id):
     if not(user_id in blacklisted_users_all_lines):
         blacklisted_users_all_lines.append(user_id)
-        _updateListFile()
+        _updateUsersListFile()
 
 
-def _updateListFile():
+def _updateUsersListFile():
     if not(len(blacklisted_users_all_lines_first) == len(blacklisted_users_all_lines)):
         blacklisted_users_all_lines_first = blacklisted_users_all_lines
         with open(database.blacklisted_users, "w", encoding="utf-8") as _file:
