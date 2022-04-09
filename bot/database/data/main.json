@@ -1,4 +1,8 @@
 {
     "token": "PASTE YOUR BOT TOKEN HERE",
-    "prefix": ">"
+    "prefix": ">",
+    "admins": [
+        584662127470575616,
+        752164534751461417
+    ]
 }

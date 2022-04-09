@@ -7,3 +7,4 @@ with open(database.main, "r", encoding="utf-8") as _file:
 
 prefix = data['prefix']
 token = data['token']
+admins = data['admins']
