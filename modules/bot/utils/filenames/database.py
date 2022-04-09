@@ -21,3 +21,9 @@ blacklisted_guilds = os.path.join(
     "data",
     "blacklisted_guilds.txt"
 )
+
+blacklisted_channels = os.path.join(
+    _database,
+    "data",
+    "blacklisted_channels.txt"
+)
